@@ -1,0 +1,226 @@
+/* =========================================================
+   Wilson County Motors — Colors & Type
+   A family-owned Tennessee dealership since 1927.
+   The system leans on a high-contrast black/white core
+   (inherited from the wordmark) warmed by a Tennessee-red
+   accent and a parchment off-white for long reading.
+   ========================================================= */
+
+/* ---------- Fonts -----------------------------------------
+   The logo wordmark is a heavy, geometric, lowercase sans —
+   closest open match is Archivo Black / Archivo. We pair it
+   with Source Serif 4 for long-form ("Since 1927" heritage
+   cues) and JetBrains Mono for VINs, stock numbers, specs.
+   -----------------------------------------------------------
+   NOTE TO USER: no original brand font files were provided.
+   These Google Fonts are SUBSTITUTIONS. If you have the real
+   wordmark typeface (appears custom / Avenir-Black-ish),
+   drop the .woff2 into fonts/ and swap the @font-face below.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* =========================================================
+     COLOR — core
+     Black/white are dominant (the wordmark is pure black).
+     "Tennessee red" is the single brand accent — a clay-red
+     that echoes the red in the GMC badge and TN state flag,
+     appropriate for a Lebanon, TN dealer.
+     ========================================================= */
+
+  /* Neutrals — ink scale */
+  --wc-ink-000: #ffffff;
+  --wc-ink-050: #fafaf8;   /* parchment / page bg */
+  --wc-ink-100: #f2f1ee;   /* card soft bg */
+  --wc-ink-200: #e5e3dd;   /* hairline / divider */
+  --wc-ink-300: #c9c6bd;   /* disabled / placeholder */
+  --wc-ink-400: #8a877e;   /* muted text */
+  --wc-ink-500: #5a5852;   /* secondary text */
+  --wc-ink-600: #3d3b37;   /* body on light */
+  --wc-ink-700: #26251f;   /* heading */
+  --wc-ink-900: #0a0a08;   /* wordmark black */
+
+  /* Brand accent — Chevrolet gold (the bowtie gold).
+     Chevy's primary brand color pair is Chevy Gold + Chevy Dark Blue. */
+  --wc-gold-050: #fff8e0;
+  --wc-gold-100: #ffeeb0;
+  --wc-gold-300: #ffd766;
+  --wc-gold-500: #ffc72c;   /* Chevy Gold — primary accent */
+  --wc-gold-600: #e0a800;   /* hover */
+  --wc-gold-700: #a57a00;   /* pressed */
+
+  /* Chevy Dark Blue — paired corporate color; used for CTAs on light,
+     for trust/finance cues, and as the go-to ink behind gold. */
+  --wc-blue-050: #e8ecf2;
+  --wc-blue-100: #c8d0de;
+  --wc-blue-300: #5f7aa3;
+  --wc-blue-500: #1a3c74;   /* mid */
+  --wc-blue-700: #0b1f3a;   /* Chevy Dark Blue */
+  --wc-blue-900: #061226;
+
+  /* Legacy red retained for GMC chrome & sale stickers only.
+     Do NOT use as brand accent. */
+  --wc-red-050: #fdf2ef;
+  --wc-red-500: #c8102e;   /* GMC red */
+  --wc-red-600: #a00a22;
+  --wc-red-700: #7a0818;
+
+  /* Tan / heritage — used for "Since 1927" and award ribbons */
+  --wc-tan-100: #f1ead8;
+  --wc-tan-300: #d9c48a;
+  --wc-tan-500: #a98a3a;
+
+  /* Semantic — status */
+  --wc-success: #2a7a4b;
+  --wc-success-bg: #e6f1ea;
+  --wc-warning: #b5721a;
+  --wc-warning-bg: #fbefd9;
+  --wc-danger: var(--wc-red-600);
+  --wc-danger-bg: var(--wc-red-050);
+  --wc-info: var(--wc-blue-700);
+  --wc-info-bg: var(--wc-blue-050);
+
+  /* OEM badge accents — ONLY for franchise-specific chrome.
+     Never as ambient brand color for the dealership. */
+  --wc-chevy-blue: #0b1f3a;
+  --wc-chevy-gold: #ffc72c;
+  --wc-chevy-silver: #c9ccd1;
+  --wc-buick-red:  #9d2235;
+  --wc-gmc-red:    #c8102e;
+
+  /* =========================================================
+     SEMANTIC ROLES — reach for these in components
+     ========================================================= */
+  --fg-1: var(--wc-ink-900);       /* primary text */
+  --fg-2: var(--wc-ink-600);       /* body */
+  --fg-3: var(--wc-ink-500);       /* secondary */
+  --fg-muted: var(--wc-ink-400);
+  --fg-on-dark: var(--wc-ink-000);
+  --fg-accent: var(--wc-blue-700);
+
+  --bg-page: var(--wc-ink-050);
+  --bg-surface: var(--wc-ink-000);
+  --bg-soft: var(--wc-ink-100);
+  --bg-inverse: var(--wc-ink-900);
+  --bg-accent: var(--wc-gold-500);
+  --bg-cta: var(--wc-blue-700);          /* primary CTA on light */
+  --fg-on-gold: var(--wc-blue-700);      /* text on gold */
+
+  --border-hairline: var(--wc-ink-200);
+  --border-strong: var(--wc-ink-300);
+  --border-ink: var(--wc-ink-900);
+
+  /* =========================================================
+     TYPOGRAPHY
+     Families — Archivo Black for wordmark-echo display,
+     Archivo for UI, Source Serif for heritage + long copy,
+     JetBrains Mono for stock numbers / VINs.
+     ========================================================= */
+  --font-display: 'Archivo Black', 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Archivo', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale — dealer-signage rhythm: big, heavy, confident */
+  --fs-hero: clamp(56px, 8vw, 96px);   /* "We've been here since 1927." */
+  --fs-display: clamp(40px, 5vw, 64px);
+  --fs-h1: 40px;
+  --fs-h2: 30px;
+  --fs-h3: 22px;
+  --fs-h4: 18px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-micro: 12px;
+  --fs-eyebrow: 13px;
+
+  --lh-tight: 0.95;
+  --lh-heading: 1.1;
+  --lh-body: 1.55;
+  --lh-loose: 1.7;
+
+  --ls-display: -0.02em;   /* wordmark is tight */
+  --ls-heading: -0.01em;
+  --ls-eyebrow: 0.14em;    /* all-caps eyebrows only */
+  --ls-body: 0;
+
+  /* =========================================================
+     SPACING / RADII / SHADOWS
+     Restrained; this is a dealership, not a fintech.
+     ========================================================= */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;     /* default — small, square-ish, signage-like */
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* Shadows — flat by default; one lift shadow for cards/menus */
+  --shadow-hairline: inset 0 0 0 1px var(--border-hairline);
+  --shadow-card: 0 1px 2px rgba(10,10,8,0.04), 0 2px 6px rgba(10,10,8,0.06);
+  --shadow-lift: 0 6px 20px rgba(10,10,8,0.10), 0 2px 4px rgba(10,10,8,0.04);
+  --shadow-sticker: 0 10px 30px rgba(10,10,8,0.18);
+  --shadow-focus: 0 0 0 3px rgba(255,199,44,0.45);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+}
+
+/* ---------- Element defaults ------------------------------ */
+html, body {
+  background: var(--bg-page);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--fg-1);
+  letter-spacing: var(--ls-heading);
+  line-height: var(--lh-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); font-family: var(--font-ui); font-weight: 700; }
+
+p  { margin: 0 0 var(--sp-4); text-wrap: pretty; }
+a  { color: var(--fg-accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--wc-red-700); }
+
+small { font-size: var(--fs-small); color: var(--fg-3); }
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.92em; }
+
+/* ---------- Utility classes ------------------------------- */
+.wc-hero      { font-family: var(--font-display); font-size: var(--fs-hero);    line-height: var(--lh-tight); letter-spacing: var(--ls-display); }
+.wc-display   { font-family: var(--font-display); font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--ls-display); }
+.wc-eyebrow   { font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--fg-accent); }
+.wc-lede      { font-family: var(--font-serif); font-size: var(--fs-body-lg); line-height: var(--lh-loose); color: var(--fg-2); }
+.wc-serif     { font-family: var(--font-serif); }
+.wc-mono      { font-family: var(--font-mono); }
+.wc-wordmark  { font-family: var(--font-display); text-transform: lowercase; letter-spacing: -0.04em; line-height: 0.9; }
+
+.wc-since     { font-family: var(--font-serif); font-style: italic; color: var(--wc-tan-500); letter-spacing: 0.02em; }

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilson County Teacher of the Year | 28 Years of Honoring Educators | Wilson County Motors</title>
+<meta name="description" content="Lindsay Morgan of Lebanon High School is the 2025-2026 Wilson County Teacher of the Year. Co-sponsored by Wilson County Motors and CedarStone Bank since 1998, the program has honored 28 years of outstanding educators across Wilson County, Tennessee.">
+<link rel="canonical" href="https://www.wilsoncountymotors.com/community/teacher-of-the-year.html">
+<meta property="og:title" content="Wilson County Teacher of the Year | Wilson County Motors">
+<meta property="og:description" content="28 years of honoring Wilson County educators. Co-sponsored by Wilson County Motors and CedarStone Bank.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.wilsoncountymotors.com/community/teacher-of-the-year.html">
+<meta property="og:image" content="https://www.wilsoncountymotors.com/community/assets/toty-2026-winner.jpg">
+
+<link rel="stylesheet" href="assets/wc-design-system.css">
+<link rel="stylesheet" href="assets/site-styles.css">
+
+<style>
+/* Page-specific */
+.winner-hero-img { aspect-ratio: 3/2; object-fit: cover; }
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); margin: 40px 0; }
+.stat-row > div { padding: 28px 20px; border-right: 1px solid var(--border-hairline); }
+.stat-row > div:last-child { border-right: 0; }
+.stat-row .num { font-family: var(--font-display); font-size: 44px; letter-spacing: -0.02em; line-height: 1; color: var(--wc-ink-900); }
+.stat-row .lbl { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); margin-top: 10px; font-weight: 700; }
+@media (max-width: 768px) { .stat-row { grid-template-columns: repeat(2, 1fr); } .stat-row > div:nth-child(2) { border-right: 0; } .stat-row > div:nth-child(1), .stat-row > div:nth-child(2) { border-bottom: 1px solid var(--border-hairline); } }
+
+/* Nominee table */
+.toc-controls { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+.toc-controls input, .toc-controls select { font-family: var(--font-ui); font-size: 14px; padding: 10px 14px; border: 1px solid var(--border-strong); border-radius: 4px; background: #fff; color: var(--wc-ink-900); }
+.toc-controls input { flex: 1; min-width: 220px; }
+.toc-count { font-family: var(--font-mono); font-size: 12px; color: var(--fg-3); margin-left: auto; letter-spacing: 0.04em; }
+.nominee-table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); }
+.nominee-table thead th { text-align: left; padding: 14px 12px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); font-weight: 700; border-bottom: 2px solid var(--wc-ink-900); cursor: pointer; user-select: none; white-space: nowrap; background: #fff; }
+.nominee-table thead th:hover { color: var(--fg-accent); }
+.nominee-table thead th .sort { display: inline-block; width: 10px; margin-left: 4px; color: var(--fg-muted); }
+.nominee-table thead th.sort-asc .sort::after { content: "▲"; color: var(--fg-accent); }
+.nominee-table thead th.sort-desc .sort::after { content: "▼"; color: var(--fg-accent); }
+.nominee-row { border-bottom: 1px solid var(--border-hairline); background: #fff; transition: background 120ms ease; }
+.nominee-row:hover { background: var(--wc-ink-050, #f5f4f0); }
+.nominee-row > td { padding: 16px 12px; vertical-align: middle; }
+.nominee-row .mono-cell { display: flex; align-items: center; gap: 14px; }
+.mono-initials { width: 44px; height: 44px; flex-shrink: 0; border-radius: 4px; background: var(--wc-ink-900); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 15px; letter-spacing: 0.04em; font-weight: 900; }
+.mono-initials.tan { background: var(--wc-tan-500); }
+.mono-initials.blue { background: var(--wc-blue-700); }
+.mono-initials.red { background: var(--wc-red-500); }
+.mono-initials.ink { background: var(--wc-ink-900); }
+.nominee-name { font-family: var(--font-display); font-size: 17px; letter-spacing: -0.01em; color: var(--wc-ink-900); line-height: 1.15; }
+.nominee-name.winner::after { content: "★ 2026 Winner"; display: inline-block; margin-left: 10px; padding: 3px 8px; background: var(--wc-gold-500); color: var(--wc-ink-900); font-family: var(--font-ui); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; border-radius: 3px; vertical-align: 2px; }
+.nominee-sub { font-family: var(--font-serif); font-style: italic; font-size: 13px; color: var(--fg-3); margin-top: 2px; }
+.nominee-expand { cursor: pointer; background: transparent; border: 0; color: var(--fg-accent); font-family: var(--font-ui); font-weight: 700; font-size: 13px; padding: 4px 8px; }
+.nominee-expand-row { display: none; }
+.nominee-expand-row.open { display: table-row; }
+.nominee-expand-row td { background: var(--wc-ink-100); padding: 24px 28px; border-bottom: 1px solid var(--border-hairline); }
+.nominee-expand-row .field { margin-bottom: 14px; }
+.nominee-expand-row .field:last-child { margin-bottom: 0; }
+.nominee-expand-row .lbl { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wc-tan-500); font-weight: 700; margin-bottom: 4px; }
+.nominee-expand-row .val { font-family: var(--font-serif); font-size: 15px; line-height: 1.6; color: var(--fg-1); }
+@media (max-width: 768px) {
+  .nominee-table thead { display: none; }
+  .nominee-table, .nominee-table tbody, .nominee-row, .nominee-row td { display: block; width: 100%; }
+  .nominee-row { padding: 16px; }
+  .nominee-row > td { padding: 4px 0; border: 0; }
+  .nominee-row > td[data-hide-mobile] { display: none; }
+}
+
+/* Past winners wall */
+.honor-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border-hairline); border-radius: 4px; overflow: hidden; background: var(--border-hairline); }
+@media (max-width: 900px) { .honor-wall { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .honor-wall { grid-template-columns: 1fr; } }
+.honor-cell { background: #fff; padding: 20px 22px; display: flex; flex-direction: column; gap: 4px; min-height: 128px; position: relative; }
+.honor-cell.gap { background: var(--wc-ink-100); justify-content: center; align-items: flex-start; }
+.honor-cell .yr { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--wc-tan-500); font-weight: 600; }
+.honor-cell .nm { font-family: var(--font-display); font-size: 20px; letter-spacing: -0.02em; line-height: 1.1; color: var(--wc-ink-900); }
+.honor-cell .sch { font-family: var(--font-serif); font-style: italic; font-size: 13px; color: var(--fg-3); line-height: 1.4; margin-top: auto; }
+.honor-cell.current { background: var(--wc-ink-900); color: #fff; }
+.honor-cell.current .yr { color: var(--wc-gold-500); }
+.honor-cell.current .nm { color: #fff; }
+.honor-cell.current .sch { color: rgba(255,255,255,0.78); }
+.honor-cell.gap .nm { font-size: 15px; font-style: italic; font-family: var(--font-serif); color: var(--fg-3); }
+.honor-cell.gap .sch { font-size: 12px; color: var(--fg-muted); margin-top: 6px; font-style: normal; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.gallery-item { background: var(--wc-ink-100); border: 1px solid var(--border-hairline); overflow: hidden; border-radius: 4px; position: relative; min-height: 180px; }
+.gallery-item.span-6 { grid-column: span 6; }
+.gallery-item.span-4 { grid-column: span 4; }
+.gallery-item.span-3 { grid-column: span 3; }
+.gallery-item.span-8 { grid-column: span 8; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-item .gphold { width: 100%; height: 100%; min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; border: 1px dashed var(--border-strong); }
+.gallery-item .gphold .tag { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wc-tan-500); font-weight: 700; margin-bottom: 8px; }
+.gallery-item .gphold .desc { font-family: var(--font-serif); font-style: italic; font-size: 14px; color: var(--fg-3); max-width: 260px; line-height: 1.5; }
+.gallery-item .cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(10,10,8,0.88), rgba(10,10,8,0)); color: #fff; font-family: var(--font-ui); font-size: 13px; font-weight: 600; }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(6, 1fr); } .gallery-item.span-8, .gallery-item.span-4, .gallery-item.span-3 { grid-column: span 6; } }
+
+/* Pull quote attribution style */
+.source-credit { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); margin-top: 10px; }
+.source-credit strong { color: var(--wc-ink-900); }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.wilsoncountymotors.com/community/teacher-of-the-year.html",
+      "url": "https://www.wilsoncountymotors.com/community/teacher-of-the-year.html",
+      "headline": "Wilson County Teacher of the Year - 28 Years of Honoring Educators",
+      "datePublished": "2026-04-11",
+      "dateModified": "2026-04-21",
+      "image": "https://www.wilsoncountymotors.com/community/assets/toty-2026-winner.jpg",
+      "author": { "@type": "Organization", "name": "Wilson County Motors" },
+      "publisher": { "@type": "Organization", "name": "Wilson County Motors", "logo": { "@type": "ImageObject", "url": "https://www.wilsoncountymotors.com/community/assets/logo-wordmark.png" } },
+      "about": {
+        "@type": "Award",
+        "name": "Wilson County Teacher of the Year",
+        "description": "An annual recognition program for outstanding educators in Wilson County, Tennessee, co-sponsored by Wilson County Motors and CedarStone Bank since the 1998-1999 school year.",
+        "sponsor": [
+          { "@type": "AutoDealer", "name": "Wilson County Chevrolet Buick GMC Hyundai" },
+          { "@type": "BankOrCreditUnion", "name": "CedarStone Bank" }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.wilsoncountymotors.com/community/teacher-of-the-year.html#lindsay-morgan",
+      "name": "Lindsay Morgan",
+      "jobTitle": "Culinary Arts and Work-Based Learning Teacher",
+      "worksFor": { "@type": "HighSchool", "name": "Lebanon High School", "address": { "@type": "PostalAddress", "addressLocality": "Lebanon", "addressRegion": "TN" } },
+      "award": "2025-2026 Wilson County Teacher of the Year"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.wilsoncountymotors.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Community", "item": "https://www.wilsoncountymotors.com/community/" },
+        { "@type": "ListItem", "position": 3, "name": "Teacher of the Year", "item": "https://www.wilsoncountymotors.com/community/teacher-of-the-year.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Who is the 2025-2026 Wilson County Teacher of the Year?", "acceptedAnswer": { "@type": "Answer", "text": "Lindsay Morgan, a culinary arts and work-based learning teacher at Lebanon High School, was named the 2025-2026 Wilson County Teacher of the Year on April 10, 2026, at the 28th annual awards banquet held at Cumberland University's Baird Chapel." } },
+        { "@type": "Question", "name": "Who sponsors the Wilson County Teacher of the Year program?", "acceptedAnswer": { "@type": "Answer", "text": "The program is co-sponsored by Wilson County Motors (Wilson County Chevrolet Buick GMC Hyundai) and CedarStone Bank. The two businesses have continuously co-sponsored the award since the 1998-1999 school year - 28 consecutive years." } },
+        { "@type": "Question", "name": "Who started the Wilson County Teacher of the Year program?", "acceptedAnswer": { "@type": "Answer", "text": "The program was conceived around 1996 by W.P. Bone III, owner of Wilson County Motors, and Bob McDonald, President and CEO of CedarStone Bank. The inaugural award was presented for the 1998-1999 school year." } },
+        { "@type": "Question", "name": "How is the Wilson County Teacher of the Year selected?", "acceptedAnswer": { "@type": "Answer", "text": "Each participating school in Wilson County selects its own Teacher of the Year by peer nomination. School-level winners then complete application packets that include philosophy statements, contributions, and comments from principals, parents, and students. An anonymous panel of faculty members from Cumberland University's Education Department reviews the packets and selects the county-wide winner." } },
+        { "@type": "Question", "name": "What does the Wilson County Teacher of the Year receive?", "acceptedAnswer": { "@type": "Answer", "text": "The overall county winner receives a personal check for $3,000 and their school receives a $1,000 check. All 34 school-level nominees receive a commemorative plaque. The winner's name is inscribed on plaques displayed at chamber of commerce and school board offices in Mt. Juliet, Watertown, and Lebanon/Wilson County." } },
+        { "@type": "Question", "name": "How many schools participate in the program?", "acceptedAnswer": { "@type": "Answer", "text": "In the 2025-2026 school year, 34 public and private schools across Wilson County participated in the program, including schools from Wilson County Schools and the Lebanon Special School District." } },
+        { "@type": "Question", "name": "Where is the Teacher of the Year banquet held?", "acceptedAnswer": { "@type": "Answer", "text": "The annual Teacher of the Year awards banquet is traditionally held at Baird Chapel on the campus of Cumberland University in Lebanon, Tennessee. The keynote address is typically delivered by the President of Cumberland University." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="https://www.wilsoncountymotors.com/">Home</a>
+    <span class="sep">/</span>
+    <a href="https://www.wilsoncountymotors.com/community/">Community</a>
+    <span class="sep">/</span>
+    <span class="current">Teacher of the Year</span>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-image"><img src="assets/toty-2026-winner.jpg" alt="Lindsay Morgan of Lebanon High School accepts the 2025-2026 Wilson County Teacher of the Year award from Bob McDonald and W.P. Bone."></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Co-sponsored by Wilson County Motors &amp; CedarStone Bank &middot; Since 1998</p>
+      <h1 class="page-title" id="page-title">Wilson County<br>Teacher of the Year</h1>
+      <p class="lede">Twenty-eight consecutive years of honoring the educators who shape Wilson County. A peer-nominated, faculty-reviewed program celebrating the most valuable profession in the community.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="winner-title">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">2025&ndash;2026 Honoree</p>
+          <h2 class="section-title" id="winner-title">Lindsay Morgan, Lebanon High School</h2>
+          <div class="prose">
+            <p>Lindsay Morgan, a culinary arts and work-based learning teacher at Lebanon High School, was named the 2025&ndash;2026 Wilson County Teacher of the Year at the 28th annual awards banquet held on April 10 at Cumberland University&rsquo;s Baird Chapel.</p>
+            <p>A 22-year veteran of the classroom, Morgan was selected from a field of 34 school-level nominees by an anonymous panel of Cumberland University faculty. She is the second Lebanon High School teacher to win the county award in the past five years, following carpentry teacher Mark Wooten in 2022.</p>
+            <p>Morgan is currently pursuing a Master&rsquo;s in Leadership and indicated the $3,000 winner&rsquo;s check will go toward completing that program. Lebanon High School principal Dr. Scott Walters praised her classroom impact, noting the number of students she has taught over her tenure at LHS.</p>
+          </div>
+          <p class="source-credit">Reporting: <strong>Angie Mayes</strong>, Main Street Media &middot; The Wilson Post &middot; Photos by Claudine Ashworth, Custom Color Photo</p>
+        </div>
+        <div>
+          <figure class="img-frame">
+            <img src="assets/toty-2026-winner.jpg" alt="Lindsay Morgan holds her Teacher of the Year trophy between Bob McDonald of CedarStone Bank and W.P. Bone of Wilson County Motors.">
+            <figcaption class="caption">
+              <div class="label">April 10, 2026 &middot; Baird Chapel</div>
+              <div class="sub">Bob McDonald (CedarStone Bank), Lindsay Morgan, W.P. Bone (Wilson County Motors)</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div><div class="num">28</div><div class="lbl">Consecutive Years</div></div>
+        <div><div class="num">34</div><div class="lbl">Schools in 2025&ndash;26</div></div>
+        <div><div class="num">$3,000</div><div class="lbl">Winner&rsquo;s Check</div></div>
+        <div><div class="num">$1,000</div><div class="lbl">To Winner&rsquo;s School</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" aria-labelledby="history-title">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Origin Story</p>
+          <h2 class="section-title" id="history-title">A 1996 Idea. A 1998 Banquet. 28 Years Running.</h2>
+        </div>
+        <div class="prose">
+          <p>The program was conceived around 1996 by W.P. Bone III, then-owner of Wilson County Motors, and Bob McDonald, President and CEO of CedarStone Bank. Their shared premise: teaching is the most valuable profession in any community, and the people who do it well deserve public, substantive recognition.</p>
+          <p>After two years of planning, the inaugural award was presented for the 1998&ndash;1999 school year to Alexa Moscardelli. What began as a single county-wide honor has grown to recognize nominees from more than 30 public and private schools across Wilson County Schools, the Lebanon Special School District, and area private academies.</p>
+          <p>The prize pool has scaled with the program. Earlier honorees received a $1,500 personal check and a $500 school donation; the current award is $3,000 to the teacher and $1,000 to the school. The winner&rsquo;s name is inscribed on honor plaques at the chamber of commerce and school board offices in Mt. Juliet, Watertown, and Lebanon/Wilson County.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="process-title">
+    <div class="container">
+      <div style="max-width:720px; margin: 0 auto 48px;" class="text-center">
+        <p class="eyebrow">Selection Process</p>
+        <h2 class="section-title" id="process-title">Peer-Nominated. Faculty-Reviewed.</h2>
+        <p class="lede">A rigorous, anonymous selection process rooted in the teaching profession itself.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:var(--wc-tan-500); margin:0 0 8px;">Step 01</p>
+          <h3>School-Level Nomination</h3>
+          <p style="font-family:var(--font-serif); font-size:16px; line-height:1.6; color:var(--fg-2);">Teachers at each of the 34 participating Wilson County schools nominate one of their peers as that school&rsquo;s Teacher of the Year. Selection is driven by faculty, not administrators.</p>
+        </article>
+        <article class="card">
+          <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:var(--wc-tan-500); margin:0 0 8px;">Step 02</p>
+          <h3>Application Packet</h3>
+          <p style="font-family:var(--font-serif); font-size:16px; line-height:1.6; color:var(--fg-2);">Each nominee submits a self-evaluation responding to five questions and includes comments from their principal, parents of students they&rsquo;ve taught, and when possible, from the students themselves.</p>
+        </article>
+        <article class="card">
+          <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:var(--wc-tan-500); margin:0 0 8px;">Step 03</p>
+          <h3>Cumberland Faculty Review</h3>
+          <p style="font-family:var(--font-serif); font-size:16px; line-height:1.6; color:var(--fg-2);">An anonymous panel of faculty from Cumberland University&rsquo;s Education Department reviews all packets and selects the county-wide winner. The announcement is made live at the April banquet at Baird Chapel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" aria-labelledby="nominees-title">
+    <div class="container">
+      <p class="eyebrow">2025&ndash;2026 Class</p>
+      <h2 class="section-title" id="nominees-title">All 28 Nominees</h2>
+      <p class="lede" style="max-width:760px; margin-bottom:32px;">Sort by any column or filter by name, school, or subject area. Click a row to read that teacher&rsquo;s philosophy and contribution statement from their application packet.</p>
+
+      <div class="toc-controls">
+        <input type="search" id="nominee-search" placeholder="Filter by name, school, or subject…" aria-label="Filter nominees">
+        <select id="nominee-level" aria-label="Filter by school level">
+          <option value="">All school levels</option>
+          <option value="Elementary">Elementary</option>
+          <option value="Middle">Middle School</option>
+          <option value="High">High School</option>
+          <option value="Private">Private / Alternative</option>
+        </select>
+        <span class="toc-count" id="nominee-count">28 of 28</span>
+      </div>
+
+      <div style="overflow-x:auto;">
+      <table class="nominee-table" id="nominee-table">
+        <thead>
+          <tr>
+            <th data-sort="name" class="sort-asc">Teacher <span class="sort"></span></th>
+            <th data-sort="school">School <span class="sort"></span></th>
+            <th data-sort="subject">Subject <span class="sort"></span></th>
+            <th data-sort="years" data-hide-mobile>Years <span class="sort"></span></th>
+            <th style="width:80px;"></th>
+          </tr>
+        </thead>
+        <tbody id="nominee-body"></tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="winners-title">
+    <div class="container">
+      <div style="max-width:820px; margin:0 auto 44px;" class="text-center">
+        <p class="eyebrow">The Roll of Honor</p>
+        <h2 class="section-title" id="winners-title">Wilson County Teachers of the Year, 1998&ndash;Present</h2>
+        <p class="lede">Twenty-seven named honorees. Two years paused for the COVID-19 pandemic. Twenty-eight banquets and counting.</p>
+      </div>
+
+      <div class="honor-wall" id="honor-wall"></div>
+    </div>
+  </section>
+
+  <section class="section-alt" aria-labelledby="gallery-title">
+    <div class="container">
+      <p class="eyebrow">From the Banquet</p>
+      <h2 class="section-title" id="gallery-title">2026 Photo Gallery</h2>
+      <p class="lede" style="max-width:760px; margin-bottom:32px;">Scenes from the 28th annual Wilson County Teacher of the Year banquet, Cumberland University&rsquo;s Baird Chapel, April 10, 2026.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item span-8">
+          <img src="assets/toty-2026-winner.jpg" alt="Lindsay Morgan of Lebanon High School accepts the 2025-2026 award.">
+          <div class="cap">Lindsay Morgan accepts the 2025&ndash;2026 award from Bob McDonald (left) and W.P. Bone (right).</div>
+        </div>
+        <div class="gallery-item span-4">
+          <img src="assets/toty-group.jpg" alt="The 2025-2026 Teacher of the Year nominees on stage at Baird Chapel with W.P. Bone III.">
+          <div class="cap">All nominees on stage with W.P. Bone III.</div>
+        </div>
+        <div class="gallery-item span-4">
+          <img src="assets/toty-welcome.jpg" alt="Bob and Susan McDonald of CedarStone Bank welcome nominee teachers as they arrive at Baird Chapel.">
+          <div class="cap">Bob and Susan McDonald welcome nominees at the door.</div>
+        </div>
+        <div class="gallery-item span-4">
+          <img src="assets/toty-stage.jpg" alt="W.P. Bone, Susan Lord, Debbie Whited, and Bob McDonald at the step-and-repeat before the ceremony.">
+          <div class="cap">W.P. Bone, Susan Lord, Debbie Whited, and Bob McDonald.</div>
+        </div>
+        <div class="gallery-item span-4">
+          <img src="assets/toty-sponsors.jpg" alt="Bob McDonald, Aaron Bellar, Mitchel Bone, Cristy Stumb, and Cumberland University President Paul Stumb.">
+          <div class="cap">Bob McDonald, Aaron Bellar, Mitchel Bone, Cristy Stumb, and Paul Stumb.</div>
+        </div>
+        <div class="gallery-item span-6">
+          <img src="assets/toty-podium.jpg" alt="Dr. Paul Stumb delivers remarks from the Cumberland University podium at Baird Chapel.">
+          <div class="cap">Dr. Paul Stumb at the Cumberland University podium, Baird Chapel.</div>
+        </div>
+        <div class="gallery-item span-6">
+          <img src="assets/toty-guests.jpg" alt="Guests seated at round tables in Baird Chapel during the awards banquet.">
+          <div class="cap">The 28th annual banquet in Baird Chapel &mdash; 34 nominees, sponsors, and past winners.</div>
+        </div>
+      </div>
+
+      <p class="source-credit" style="margin-top:20px;">Additional banquet photos forthcoming. Credit: <strong>Claudine Ashworth / Custom Color Photo</strong> for The Wilson Post.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-title">
+    <div class="container-narrow">
+      <p class="eyebrow">Frequently Asked Questions</p>
+      <h2 class="section-title" id="faq-title">About the Program.</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Who is the 2025&ndash;2026 Wilson County Teacher of the Year?</summary>
+          <p class="faq-answer">Lindsay Morgan, a culinary arts and work-based learning teacher at Lebanon High School, was named the 2025&ndash;2026 Wilson County Teacher of the Year on April 10, 2026, at the 28th annual awards banquet held at Cumberland University&rsquo;s Baird Chapel.</p>
+        </details>
+        <details>
+          <summary>Who sponsors the Wilson County Teacher of the Year program?</summary>
+          <p class="faq-answer">The program is co-sponsored by Wilson County Motors (Wilson County Chevrolet Buick GMC Hyundai) and CedarStone Bank. The two businesses have continuously co-sponsored the award for 28 consecutive years, beginning with the 1998&ndash;1999 school year.</p>
+        </details>
+        <details>
+          <summary>Who started the Wilson County Teacher of the Year program?</summary>
+          <p class="faq-answer">The program was conceived around 1996 by W.P. Bone III, owner of Wilson County Motors, and Bob McDonald, President and CEO of CedarStone Bank. The inaugural award was presented for the 1998&ndash;1999 school year to Alexa Moscardelli.</p>
+        </details>
+        <details>
+          <summary>How is the Wilson County Teacher of the Year selected?</summary>
+          <p class="faq-answer">Each participating school in Wilson County selects its own Teacher of the Year by peer nomination. School-level winners complete application packets that include philosophy statements, contributions, and comments from principals, parents, and students. An anonymous panel of faculty from Cumberland University&rsquo;s Education Department reviews the packets and selects the county-wide winner.</p>
+        </details>
+        <details>
+          <summary>What does the Wilson County Teacher of the Year receive?</summary>
+          <p class="faq-answer">The overall county winner receives a personal check for $3,000 and their school receives a $1,000 check. All 34 school-level nominees receive a commemorative plaque. The winner&rsquo;s name is inscribed on honor plaques displayed at the chamber of commerce and school board offices in Mt. Juliet, Watertown, and Lebanon/Wilson County.</p>
+        </details>
+        <details>
+          <summary>How many schools participate in the program?</summary>
+          <p class="faq-answer">In the 2025&ndash;2026 school year, 34 public and private schools across Wilson County participated in the program, including schools from Wilson County Schools and the Lebanon Special School District.</p>
+        </details>
+        <details>
+          <summary>Where is the Teacher of the Year banquet held?</summary>
+          <p class="faq-answer">The banquet is traditionally held at Baird Chapel on the campus of Cumberland University in Lebanon, Tennessee. The keynote address is typically delivered by the President of Cumberland University.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="see-also" aria-labelledby="seealso-title">
+    <div class="container">
+      <h2 id="seealso-title">More community involvement</h2>
+      <div class="see-also-grid">
+        <a href="bbb.html" class="see-also-card"><div class="eyebrow">Better Business Bureau</div><div class="title">Chairman of the Board, Middle TN &amp; Southern KY</div><div class="arrow">Read more &rarr;</div></a>
+        <a href="cumberland-university.html" class="see-also-card"><div class="eyebrow">Cumberland University</div><div class="title">A Century of Bone Family Leadership</div><div class="arrow">Read more &rarr;</div></a>
+        <a href="business-person-of-the-year.html" class="see-also-card"><div class="eyebrow">Lebanon Wilson Chamber</div><div class="title">2026 Business Person of the Year</div><div class="arrow">Read more &rarr;</div></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="padding:24px; text-align:right;">
+    <span class="updated-stamp">Updated April 2026</span>
+  </div>
+</main>
+
+<script>
+// ---- 2025-26 Nominees ----
+const NOMINEES = [
+  {name:"Scott Pope", school:"Barry Tatum Academy", level:"Private", subject:"Grades 9-12, multiple subjects", years:23, philosophy:"Builds strong student relationships in a structured environment that fosters connection, confidence and success.", contribution:"Classroom rapport has contributed to decreased behavioral issues and an environment where students feel safe taking intellectual risks."},
+  {name:"Carolyne Brooke Taylor", school:"Byars-Dowdy Elementary School", level:"Elementary", subject:"5th Grade Mathematics", years:12, philosophy:"All students can learn at high levels when instruction is clear, standard-aligned and responsive to their strengths and needs.", contribution:"Strengthened schoolwide consistency by delivering high-quality instruction and mentoring teachers through coaching and professional learning."},
+  {name:"Tabitha Taylor", school:"Carroll-Oakland Elementary School", level:"Elementary", subject:"Kindergarten", years:9, philosophy:"Teaching supports children's growth through an engaging, nurturing environment where every student feels valued.", contribution:"Lays the foundation for lifelong learning and a love of school in a safe, engaging classroom environment."},
+  {name:"Susan Long", school:"Castle Heights Elementary School", level:"Elementary", subject:"Second Grade", years:27, philosophy:"When a child feels loved and valued every day, academic success follows.", contribution:"Has spent a career meeting students where they are while accommodating diverse learning styles."},
+  {name:"Jeri Noel", school:"Elzie D. Patton Elementary School", level:"Elementary", subject:"5th Grade Math / Science", years:18, philosophy:"Effective teaching begins with relationships; when students are known, valued and engaged, they learn deeply.", contribution:"Demonstrates how instructional practices support student learning across multiple content areas and mentors colleagues through collaboration."},
+  {name:"Brandy Hardin", school:"Coles Ferry Elementary School", level:"Elementary", subject:"1st Grade, All Subjects", years:14, philosophy:"Every child can learn and thrive in a safe, inclusive environment that fosters curiosity, growth and a love of learning.", contribution:"Contributes to student growth by creating an engaging, supportive classroom where academic skills and confidence develop together."},
+  {name:"Amber B. Farley", school:"Friendship Christian School", level:"Private", subject:"Kindergarten", years:6, philosophy:"Every child is a gift; teaching is a joyful responsibility to serve the whole child while building a strong foundation.", contribution:"Shines a light on students' capabilities while guiding them to show kindness in all they do."},
+  {name:"Hannah Petty", school:"Gladeville Elementary School", level:"Elementary", subject:"3rd Grade, Reading & Social Studies", years:10, philosophy:"Support students in ways that build confidence, foster independence and empower them to reach their goals.", contribution:"Builds lasting, impactful relationships in a trust-centered environment where students feel seen, valued and empowered."},
+  {name:"Keith Heim", school:"Gladeville Middle School", level:"Middle", subject:"Band, Grades 6-8", years:26, philosophy:"Build kind, caring, responsible citizens through strong relationships and lifelong skills taught through the performing arts.", contribution:"Believes strong, long-term teacher-student relationships are his biggest contribution over two and a half decades."},
+  {name:"Leslie Brumbach", school:"Green Hill High School", level:"High", subject:"Multi-Language Learner (ESL), 9-12", years:20, philosophy:"Students grow most when a safe environment invites questions, mistakes and relationship-building.", contribution:"Wants students to feel praised, encouraged through mistakes, and excited to learn something new each day."},
+  {name:"Tiffany McHenry", school:"Jones Brummett Elementary School", level:"Elementary", subject:"Pre-K, General Studies", years:21, philosophy:"Learning environments should foster inclusivity, empowerment, high expectations, resilience, confidence and love.", contribution:"Has developed lifelong relationships with children, families and teachers while serving more than 420 children in the community."},
+  {name:"Brooke Fazio", school:"LaGuardo Elementary School", level:"Elementary", subject:"K-5 Physical Education", years:8, philosophy:"Inspire students to enjoy being active while developing fundamental skills, confidence and positive character traits beyond the gym.", contribution:"Empowers students through meaningful PE experiences promoting confidence, perseverance and healthy habits."},
+  {name:"Amanda Mills", school:"Lakeview Elementary School", level:"Elementary", subject:"Kindergarten", years:15, philosophy:"Inspire a passion for learning by maintaining an inclusive, engaging educational environment.", contribution:"Manages diverse, inclusive classrooms while mentoring new educators and student teachers and leading grade-level teams."},
+  {name:"Lindsay Morgan", school:"Lebanon High School", level:"High", subject:"9th-12th Grade, Culinary Arts & Work-Based Learning", years:22, philosophy:"Asks what effect she is having, what dent she wants to make in students' lives, and whether what she teaches is relevant.", contribution:"Leads by example, showing students that consistency, courage and willingness to learn can open unexpected doors.", winner:true},
+  {name:"Wendi Secrest Lewis", school:"Mt. Juliet Christian Academy", level:"Private", subject:"1st Grade, All Subjects", years:6, philosophy:"Teaching is a calling; the role is to partner with families and colleagues to meet students where they are.", contribution:"Fosters a classroom culture honoring every child, particularly those who feel unseen, with dignity and care."},
+  {name:"Danette Baskin", school:"Mt. Juliet Elementary School", level:"Elementary", subject:"K-5 CDC Special Education", years:28, philosophy:"Every student can learn and succeed when met with differentiated instruction, high expectations and an inclusive environment.", contribution:"Brings 25 years of general-ed expertise plus specialized focus in severe and profound special education."},
+  {name:"Jennifer Davis", school:"Mt. Juliet High School", level:"High", subject:"Freshman / Algebra I Inclusion", years:23, philosophy:"Educators prepare future generations by fostering environments where students are active participants and feel supported.", contribution:"Plays a meaningful role by prioritizing relationships where students feel supported, valued and genuinely cared for."},
+  {name:"Kristina McInerney", school:"Mt. Juliet Middle School", level:"Middle", subject:"6th-8th Grade Special Education", years:8, philosophy:"Grounded in meaningful relationships, honoring individual strengths and providing equitable, inclusive instruction.", contribution:"Fosters inclusive classrooms, supports colleagues through leadership roles and advocates for student success."},
+  {name:"Alex Jones", school:"Rutland Elementary School", level:"Elementary", subject:"2nd Grade", years:10, philosophy:"Every student deserves exceptional education and a loving learning environment regardless of background.", contribution:"Positively impacts students through high-quality instruction, confidence-building and inclusive practices."},
+  {name:"Jeanie Tidwell", school:"Sam Houston Elementary School", level:"Elementary", subject:"5th Grade Reading & Social Studies", years:11, philosophy:"Effective teaching begins with strong relationships, high expectations and the support needed for growth.", contribution:"Strengthens literacy instruction, builds collaborative relationships with colleagues and advocates for student-centered practices."},
+  {name:"Julianna Dye", school:"Southside Elementary School", level:"Elementary", subject:"1st Grade", years:6, philosophy:"Every child is capable of learning, should have access to high-quality education and deserves to feel safe, loved and supported.", contribution:"Impacts students and families through Elementary FCA leadership, a Good News Club chapter and representing Southside at the Wilson County Fair."},
+  {name:"Desiree Gilbert", school:"Springdale Elementary School", level:"Elementary", subject:"1st Grade, All Subjects", years:16, philosophy:"Teach by sparking curiosity, encouraging thoughtful dialogue and empowering students to become confident, independent thinkers.", contribution:"Designs lessons, supports diverse learners and fosters a positive, inclusive classroom culture."},
+  {name:"Jessica Moses", school:"Stoner Creek Elementary School", level:"Elementary", subject:"K-5 STEM", years:22, philosophy:"Students learn best when they feel valued, safe and connected through hands-on, collaborative experiences.", contribution:"Has made a meaningful impact on thousands of students by fostering curiosity through innovative, engaging instruction."},
+  {name:"Karie Owensby", school:"Tuckers Crossroads Elementary School", level:"Elementary", subject:"4th Grade ELA & Social Studies", years:22, philosophy:"True education is a holistic process where academic growth and emotional safety are inseparable.", contribution:"Drives measurable growth in TNReady reading comprehension while mentoring new teachers and leading fundraisers."},
+  {name:"Angela Smith", school:"W.A. Wright Elementary School", level:"Elementary", subject:"Kindergarten", years:24, philosophy:"Every student has every opportunity.", contribution:"Shows up every day with a huge work ethic, forming relationships with students and families that bear fruit across decades."},
+  {name:"Emily Walters", school:"Walter J. Baird Middle School", level:"Middle", subject:"6th-8th Grade ESL", years:10, philosophy:"A teacher's role is to value every student while maintaining an environment that supports the whole student.", contribution:"Creates a classroom where students feel accepted, loved and encouraged to overcome obstacles and achieve growth."},
+  {name:"Brad Dedman", school:"Watertown High School", level:"High", subject:"Algebra 2", years:25, philosophy:"Never give up on a student; help them see beyond what they think is possible.", contribution:"Instills confidence in students to help them persevere past the classroom and into life."},
+  {name:"Kristen Webb", school:"Watertown Elementary School", level:"Elementary", subject:"Librarian, K-5th Grade", years:7, philosophy:"Inspire students to learn and grow, nurturing curiosity and creativity and creating lasting connections.", contribution:"Fosters a love of reading while creating a library space that encourages kindness, curiosity and learning."},
+  {name:"Rebecca Bennett", school:"Watertown Middle School", level:"Middle", subject:"6th-8th Grade Special Education", years:22, philosophy:"Teaching is rooted in strong relationships, consistent structure and genuine love and compassion.", contribution:"Supports PreK-8 students with diverse special needs and mentors teachers in inclusive practices."},
+  {name:"Cameron Brown", school:"West Elementary School", level:"Elementary", subject:"K-5 STEM", years:18, philosophy:"Every child, every day, deserves the opportunity to learn and enjoy school.", contribution:"Increases growth and achievement by creating an engaging, supportive environment that promotes student happiness."},
+  {name:"Meghan Hosey", school:"West Wilson Middle School", level:"Middle", subject:"8th Grade Math", years:14, philosophy:"Every student is a math person; supports students with high expectations and a focus on growth.", contribution:"14 years of growth as an educator, earning degrees and a National Board Certification while building student confidence."},
+  {name:"Sarah Morrison", school:"Wilson Central High School", level:"High", subject:"Algebra 2, Calculus", years:13, philosophy:"All students can learn math; many just need the confidence to help motivate them.", contribution:"13 years teaching Algebra 2 and more, two years as department head, 12 years coaching and multiple professional developments led."},
+  {name:"Jamie Angel", school:"Wilson County Adult High School", level:"High", subject:"12th Grade English & Social Studies", years:32, philosophy:"Make sure students know you care about them as people.", contribution:"Has helped hundreds of students achieve successes in and out of the classroom."},
+  {name:"Cody Goins", school:"Winfree Bryant Middle School", level:"Middle", subject:"6th Grade Science", years:8, philosophy:"Build independent, collaborative students who actively pursue learning beyond the classroom.", contribution:"Creates classrooms where students are valued as whole people, learning academic content alongside empathy, resilience and respect."}
+];
+
+// ---- Past winners ----
+const WINNERS = [
+  {year:"1998-99", name:"Alexa Moscardelli", school:"Inaugural Winner", special:"Inaugural"},
+  {year:"1999-00", name:"Ann Reese", school:""},
+  {year:"2000-01", name:"Lynne Harrison", school:""},
+  {year:"2001-02", name:"Diane Bennett", school:""},
+  {year:"2002-03", name:"Johnnie Payton", school:""},
+  {year:"2003-04", name:"Jackie Pitt", school:""},
+  {year:"2004-05", name:"Mary Jean Smith", school:""},
+  {year:"2005-06", name:"Gayla Combs", school:""},
+  {year:"2006-07", name:"David Akins", school:""},
+  {year:"2007-08", name:"Shannon Carney", school:""},
+  {year:"2008-09", name:"Catherine Hobbs", school:""},
+  {year:"2009-10", name:"Mary Ashby", school:""},
+  {year:"2010-11", name:"Kim Vann", school:"Castle Heights Upper Elementary · Special Needs"},
+  {year:"2011-12", name:"Debra Martin", school:""},
+  {year:"2012-13", name:"Jen Whitener", school:"McClain Christian Academy · 7th Grade"},
+  {year:"2013-14", name:"Joseph B. Murphy", school:""},
+  {year:"2014-15", name:"Kali Meyer Holder", school:"Walter J. Baird Middle · 7th Grade Math"},
+  {year:"2015-16", name:"Jennifer Elliott", school:""},
+  {year:"2016-17", name:"Melissa Granstaff", school:""},
+  {year:"2017-18", name:"Tracy Brown", school:"Mt. Juliet Elementary · ESL"},
+  {year:"2018-19", name:"Derek Southworth", school:"Lebanon High School · 11th Grade U.S. History"},
+  {year:"2019-20", name:"Banquet paused", school:"Impacted by COVID-19 pandemic", gap:true},
+  {year:"2020-21", name:"Banquet delayed", school:"Rescheduled to June 2021", gap:true},
+  {year:"2021-22", name:"Mark Wooten", school:"Lebanon High School · Carpentry"},
+  {year:"2022-23", name:"Joan Oxley", school:"Watertown Middle · 8th Grade Social Studies"},
+  {year:"2023-24", name:"Jessica Roper", school:"Southside Elementary · 3rd Grade / Softball Coach"},
+  {year:"2024-25", name:"Charisse Carter", school:"Springdale Elementary · K-5 ESL"},
+  {year:"2025-26", name:"Lindsay Morgan", school:"Lebanon High School · Culinary Arts", current:true}
+];
+
+// ---- Render nominees ----
+const tbody = document.getElementById('nominee-body');
+const countEl = document.getElementById('nominee-count');
+const searchEl = document.getElementById('nominee-search');
+const levelEl = document.getElementById('nominee-level');
+
+function initials(name) {
+  return name.split(' ').filter(p=>p && !/^[A-Z]\.$/.test(p)).slice(0,2).map(p=>p[0]).join('').toUpperCase();
+}
+function monoColor(i) {
+  return ['ink','blue','tan','red'][i % 4];
+}
+
+let sortKey = 'name';
+let sortDir = 1;
+
+function render() {
+  const q = searchEl.value.trim().toLowerCase();
+  const level = levelEl.value;
+  let rows = NOMINEES.filter(n => {
+    if (level && n.level !== level) return false;
+    if (!q) return true;
+    return [n.name, n.school, n.subject].some(s => s.toLowerCase().includes(q));
+  });
+  rows.sort((a,b) => {
+    const va = a[sortKey], vb = b[sortKey];
+    if (typeof va === 'number') return (va - vb) * sortDir;
+    return String(va).localeCompare(String(vb)) * sortDir;
+  });
+
+  tbody.innerHTML = rows.map((n, i) => `
+    <tr class="nominee-row" data-idx="${NOMINEES.indexOf(n)}">
+      <td>
+        <div class="mono-cell">
+          <span class="mono-initials ${monoColor(i)}">${initials(n.name)}</span>
+          <div>
+            <div class="nominee-name${n.winner ? ' winner' : ''}">${n.name}</div>
+            <div class="nominee-sub">${n.years} years teaching</div>
+          </div>
+        </div>
+      </td>
+      <td>${n.school}</td>
+      <td>${n.subject}</td>
+      <td data-hide-mobile>${n.years}</td>
+      <td><button class="nominee-expand" aria-expanded="false">Details ▾</button></td>
+    </tr>
+    <tr class="nominee-expand-row" data-exp="${NOMINEES.indexOf(n)}">
+      <td colspan="5">
+        <div class="field"><div class="lbl">Teaching Philosophy</div><div class="val">${n.philosophy}</div></div>
+        <div class="field"><div class="lbl">Contribution</div><div class="val">${n.contribution}</div></div>
+      </td>
+    </tr>
+  `).join('');
+  countEl.textContent = `${rows.length} of ${NOMINEES.length}`;
+
+  // expand handlers
+  tbody.querySelectorAll('.nominee-expand').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const row = e.target.closest('tr');
+      const idx = row.dataset.idx;
+      const exp = tbody.querySelector(`tr.nominee-expand-row[data-exp="${idx}"]`);
+      const open = exp.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Close ▴' : 'Details ▾';
+    });
+  });
+}
+
+// sort handlers
+document.querySelectorAll('#nominee-table thead th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
+    document.querySelectorAll('#nominee-table thead th').forEach(x => x.classList.remove('sort-asc','sort-desc'));
+    th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+    render();
+  });
+});
+searchEl.addEventListener('input', render);
+levelEl.addEventListener('change', render);
+render();
+
+// ---- Render honor wall ----
+const wall = document.getElementById('honor-wall');
+wall.innerHTML = WINNERS.map(w => `
+  <div class="honor-cell${w.current ? ' current' : ''}${w.gap ? ' gap' : ''}">
+    <div class="yr">${w.year}${w.special ? ' · '+w.special : ''}</div>
+    <div class="nm">${w.name}</div>
+    ${w.school ? `<div class="sch">${w.school}</div>` : ''}
+  </div>
+`).join('');
+</script>
+</body>
+</html>
